@@ -1,0 +1,27 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    ".md",
+    "dist",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": false,
+  "execMap": {
+    "js": "node entries/apis.js"
+  },
+  "events": {
+    "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "watch": [
+    "app/",
+    "config/",
+    "entries/"
+  ],
+  "env": {
+    "NODE_ENV": "dev",
+    "PORT": 80,
+    "NAME": "apis"
+  },
+  "ext": "js json"
+}

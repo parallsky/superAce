@@ -1,0 +1,94 @@
+{
+  "apps": [
+    {
+      "cwd": "./",
+      "args": "",
+      "watch": false,
+      "ignore_watch": [],
+      "exec_mode": "cluster_mode",
+      "max_memory_restart": "1G",
+      "merge_logs": true,
+      "instance_var": "dev",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "min_uptime": "60s",
+      "max_restarts": 3,
+      "autorestart": true,
+      "cron_restart": "",
+      "env": {
+        "NODE_ENV": "dev",
+        "PORT": 4701,
+        "NAME": "token"
+      },
+      "env_online": {
+        "NODE_ENV": "online",
+        "PORT": 4701,
+        "NAME": "token"
+      },
+      "name": "wpk-token",
+      "script": "./jobs.js",
+      "instances": 2,
+      "error_file": "./logs/jobs_error.log",
+      "out_file": "./logs/jobs.log"
+    },
+    {
+      "cwd": "./",
+      "args": "",
+      "watch": false,
+      "ignore_watch": [],
+      "exec_mode": "cluster_mode",
+      "max_memory_restart": "1G",
+      "merge_logs": true,
+      "instance_var": "dev",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "min_uptime": "60s",
+      "max_restarts": 3,
+      "autorestart": true,
+      "cron_restart": "",
+      "env": {
+        "NODE_ENV": "dev",
+        "PORT": 4601,
+        "NAME": "games"
+      },
+      "env_online": {
+        "NODE_ENV": "online",
+        "PORT": 4601,
+        "NAME": "games"
+      },
+      "name": "wpk-games",
+      "script": "./jobs.js",
+      "instances": 4,
+      "error_file": "./logs/jobs_error.log",
+      "out_file": "./logs/jobs.log"
+    },
+    {
+      "cwd": "./",
+      "args": "",
+      "watch": false,
+      "ignore_watch": [],
+      "exec_mode": "cluster_mode",
+      "max_memory_restart": "1G",
+      "merge_logs": true,
+      "instance_var": "dev",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "min_uptime": "60s",
+      "max_restarts": 3,
+      "autorestart": true,
+      "cron_restart": "",
+      "env": {
+        "NODE_ENV": "dev",
+        "PORT": 4501,
+        "NAME": "grades"
+      },
+      "env_online": {
+        "NODE_ENV": "online",
+        "PORT": 4501,
+        "NAME": "grades"
+      },
+      "name": "wpk-grades",
+      "script": "./jobs.js",
+      "instances": 8,
+      "error_file": "./logs/jobs_error.log",
+      "out_file": "./logs/jobs.log"
+    }
+  ]
+}

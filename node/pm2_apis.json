@@ -1,0 +1,34 @@
+{
+  "apps": [
+    {
+      "cwd": "./",
+      "args": "--max-http-header-size=10000000",
+      "watch": false,
+      "ignore_watch": [],
+      "exec_mode": "cluster_mode",
+      "max_memory_restart": "1G",
+      "merge_logs": true,
+      "instance_var": "dev",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "min_uptime": "60s",
+      "max_restarts": 3,
+      "autorestart": true,
+      "cron_restart": "",
+      "env": {
+        "NODE_ENV": "dev",
+        "PORT": 11001,
+        "NAME": "clubtoolapi"
+      },
+      "env_online": {
+        "NODE_ENV": "online",
+        "PORT": 11001,
+        "NAME": "apis"
+      },
+      "name": "quanzi-apis",
+      "script": "./entries/apis.js",
+      "instances": 8,
+      "error_file": "./logs/apis_error.log",
+      "out_file": "./logs/apis_out.log"
+    }
+  ]
+}

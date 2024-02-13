@@ -1,0 +1,34 @@
+{
+  "apps": [
+    {
+      "cwd": "./",
+      "args": "",
+      "watch": false,
+      "ignore_watch": [],
+      "exec_mode": "cluster_mode",
+      "max_memory_restart": "1G",
+      "merge_logs": true,
+      "instance_var": "dev",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "min_uptime": "60s",
+      "max_restarts": 3,
+      "autorestart": true,
+      "cron_restart": "",
+      "env": {
+        "NODE_ENV": "dev",
+        "PORT": 12001,
+        "NAME": "master"
+      },
+      "env_online": {
+        "NODE_ENV": "online",
+        "PORT": 12001,
+        "NAME": "master"
+      },
+      "name": "quanzi-master",
+      "script": "./entries/jobs.js",
+      "instances": 1,
+      "error_file": "./logs/error.log",
+      "out_file": "./logs/jobs.log"
+    }
+  ]
+}
